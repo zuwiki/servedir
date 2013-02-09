@@ -31,7 +31,6 @@ find myself needing to serve some pages or files.
 
     -endpt=:8080
         the interface and port to listen on
-
     -dir=./
         the directory to serve
 
