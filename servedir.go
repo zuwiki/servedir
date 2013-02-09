@@ -11,7 +11,7 @@ func main() {
 	dir := flag.String("dir", "./", "directory to serve--be careful!")
 	flag.Parse()
 	http.Handle("/", http.FileServer(http.Dir(*dir)))
-	log.Print("Listening on", *endpt)
+	log.Print("Listening on ", *endpt)
 	err := http.ListenAndServe(*endpt, nil)
 	if err != nil {
 		panic("ListenAndServe: " + err.Error())
