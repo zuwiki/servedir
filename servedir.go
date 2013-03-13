@@ -14,7 +14,7 @@ func main() {
 	log.Print("Listening on ", *endpt)
 	err := http.ListenAndServe(*endpt, nil)
 	if err != nil {
-		log.Fatal("ListenAndServe: " + err.Error())
+		log.Fatal("ListenAndServe: ", err.Error())
 	}
 }
 
