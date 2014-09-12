@@ -5,23 +5,22 @@ find myself needing to serve some pages or files.
 
 ## Non-features
 
-* URL rewriting
 * Forking/daemonizing (just do `$ servedir &`)
 * Authentication
 * CGI
 * Reverse proxying
-* Anything else really
+* Everything really
 
 ## Quick Start
 
     $ go install github.com/zuwiki/servedir
     $ export PATH=$GOPATH/bin:$PATH
-    $ cd my_html_bullshit
+    $ cd my_html_stuff
     $ servedir
     2013/02/08 18:07:44 Listening on :8080
     ^C
     $ cd ..
-    $ servedir -endpt=:9001 -dir=my_html_bullshit
+    $ servedir -endpt=:9001 -dir=my_html_stuff
     2013/02/08 18:08:04 Listening on :9001
     ^C
     $ echo my god, why didn\'t i write this myself?
@@ -33,4 +32,6 @@ find myself needing to serve some pages or files.
         the interface and port to listen on
     -dir=./
         the directory to serve
+    -spa
+        usually serve "/index.html" instead of 404s; lazy man's single page app URL rewriting
 
